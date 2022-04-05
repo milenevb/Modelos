@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Cadastro</title>
+</head>
+<body>
+    <section id="pag">
+        <header>Orçamento</header>
+        <hr> <!--Linha horizontal-->
+        <form method="post" name="orcamento" id="orcamento">
+            <fieldset> <!--Caixinha-->
+                <legend>Dados de Acesso</legend>
+
+                <label for="login"> Login</label>
+                <input type="text" name="login" required> <!-- required serve para deixar o label obrigatório -->
+
+                <label for="senha1"> Senha</label>
+                <input type="passaword" name="senha1" required>
+
+                <label for="senha2"> Confirmar senha</label>
+                <input type="password" name="senha2" required> 
+
+                <p id="msg"> * As senhas não conferem </p>
+                <!--Exibir e esconder-->
+            </fieldset>
+            <fieldset>
+                <legend>Dados de Pagamento</legend>
+
+                <P>Tipo de Acesso</P>
+                <input type="radio" name="fisica" id="fisica" checked>
+                <label for="fisica">Pessoa Física</label>
+
+                <input type="radio" name="juridica" id="juridica">
+                <label for="juridica">Pessoa Jurídica</label>
+
+                <label for="cpf">CPF</label>
+                <input type="number" name="cpf" id="cpf" placeholder="xxx.xxx.xxx.xx">
+                
+
+                <label for="tel">Telefone</label> 
+                <input type="tel" name="tel" id="tel" placeholder="(XX)XXXXX-XXXX">
+                            
+                <p>Forma de Pagamento</p>
+                <select name="pagamento">
+                    <option value="Dinheiro">Dinheiro</option>
+                    <option value="Cartão">Cartão</option>
+                    <option value="Cheque">Cheque"</option>
+                </select>
+
+            <fieldset>
+                <legend> Cartão </legend>
+
+                <label for="cartao"> Nº do Cartão</label>
+                <input type="text" name="cartao" id="cartao">
+
+                <label for="seguranca"> Código de Segurança</label>
+                <input type="number" name="seguranca" id="seguranca">
+
+                <label for="vencimento"> Vencimento</label>
+                <input type="date" name="data" id="data"> 
+                
+            </fieldset>
+        </fieldset>
+            <fieldset>
+                <legend> Produtos</legend>
+                <table align="center" class="tabela" cellpadding="20">
+                    <tr>
+                        <td> Web Can</td>
+                        <td> R$300,00</td>
+                        <td> <input type="number" name="quant1" min="0" max="9"></td>
+                        <td> <input type="text" name="tot1"></td>
+                    </tr>
+
+
+                    <tr>
+                        <td> Placa de Vídeo</td>
+                        <td> R$700,00</td>
+                        <td> <input type="number" name="quant2" min="0" max="9"></td>
+                        <td> <input type="text" name="tot2" ></td>
+                    </tr>
+
+                    <tr>
+                        <td> Placa Mãe</td>
+                        <td> R$650,00</td>
+                        <td> <input type="number" name="quant3" min="0" max="9"></td>
+                        <td> <input type="text" name="tot3" ></td>
+                    </tr>
+
+                    <tr>
+                        <td> HD Externo</td>
+                        <td> R$299,00</td>
+                        <td> <input type="number" name="quant4" min="0" max="9"></td>
+                        <td> <input type="text" name="tot4" ></td>
+                    </tr>
+
+                    <tr>
+                        <td colspan="4" align="right">
+                        <h3> Total -> R$0,00</h3>
+                        <h3> Desconto -> R$0,00</h3>
+                        <h3> Valor a Pagar ->R$2.700,00</h3> </td>
+                    </tr>
+
+                </table>
+            </fieldset>
+
+
+            <center>
+                <input type="submit" name="finalizar" id="finalizar" value="Finalizar">
+            </center>
+         
+        </form>
+    </section>
+        <script src="script/script.js"></script>
+</body>
+</html>
