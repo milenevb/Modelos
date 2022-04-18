@@ -1,5 +1,5 @@
 body{
-    background-color: brown;
+    background-color: rgba(63, 43, 99, 0.644);
     color: brown;
 }
 
@@ -55,4 +55,7 @@ legend{
     color: beige;
     padding: 2%;
     width: 50%;
+}
+#msg, #cartao, #cnpj{
+    display: none;
 }
