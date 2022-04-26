@@ -18,11 +18,11 @@
         <form class="row g-3" name="form" >
             <div class="col-md-6">
               <label for="nome" class="form-label">Nome</label>
-              <input type="text" class="form-control" id="nome" required oninput="maiusculo()"> 
+              <input type="text" class="form-control" id="nome" name="nome" placeholder="Nome Completo" required oninput="maiusculo()" > 
             </div>
             <div class="col-md-6">
               <label for="telefone" class="form-label">Telefone</label>
-              <input type="tel" class="form-control" id="telefone" required>
+              <input type="tel" class="form-control" id="telefone" placeholder="(21)99999-9999" required>
             </div>
             <div class="col-12">
               <label for="email" class="form-label">E-mail</label>
@@ -59,42 +59,42 @@
             <div class="col-md-6">
                 <div class="form-check">
                     <input class="form-check-input" type="checkbox" value="guloseimas" id="guloseimas">
-                    <label class="form-check-label" for="guloseimas">
+                    <label class="form-check-label" for="guloseimas" onclick="adiciona()">
                       Mesa de Guloseimas
                     </label>
                   </div>
                   <div class="form-check">
                     <input class="form-check-input" type="checkbox" value="personagens" id="personagens" >
-                    <label class="form-check-label" for="personagens">
+                    <label class="form-check-label" for="personagens" onclick="adiciona()">
                       Personagens
                     </label>
                   </div>
                   <div class="form-check">
                     <input class="form-check-input" type="checkbox" value="atracoes" id="atracoes" >
-                    <label class="form-check-label" for="atracoes">
+                    <label class="form-check-label" for="atracoes" onclick="adiciona()">
                       Atrações
                     </label>
                   </div>
                   <div class="form-check">
                     <input class="form-check-input" type="checkbox" value="maquiagem" id="maquiagem" >
-                    <label class="form-check-label" for="maquiagem">
+                    <label class="form-check-label" for="maquiagem" onclick="adiciona()">
                       Maquiagem Infantil
                     </label>
                   </div>
                   <div class="form-check">
                     <input class="form-check-input" type="checkbox" value="brindes" id="brindes" >
-                    <label class="form-check-label" for="brindes">
+                    <label class="form-check-label" for="brindes" onclick="adiciona()">
                       Brindes
                     </label>
                   </div>
             </div>
 
-            <div class="col-6" id="saida">
+            <div class="col-6" id="saida" >
                R$ <output id="total">0 </output>,00
               </div>
             <div class="col-12">
                 <button type="button" class="btn btn-primary">Limpar</button>
-                <button type="button" class="btn btn-success">Enviar</button>
+                <button type="button" class="btn btn-success" onclick="confirmar()">Enviar</button>
             </div>
           </form>
     </section>
