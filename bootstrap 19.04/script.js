@@ -19,33 +19,93 @@ function calculo(){
 
     //saida
     document.getElementById("total").value = valor;
+
+    document.getElementById("guloseimas").checked = false;
+    document.getElementById("personagens").checked = false;
+    document.getElementById("atracoes").checked = false;
+    document.getElementById("maquiagem").checked = false;
+    document.getElementById("brindes").checked = false;
 }
-function adiciona() {
+
+function opcionais(valor,marcado){
+
     //entrada
-    let guloseima = document.form.guloseima.value;
+    total =  document.getElementById('total').value;
 
-    //processamemto
-    if (guloseima == "guloseimas"){
-        Number (valor) += 350
+    //processamento
+
+    if(marcado){
+        total = Number(total) + Number(valor);
+        //total += valor; forma reduzida
     }
-    else if ( guloseima == "personagens"){
-        Number (valor) += 250
-    }
-    else if (guloseima == "atracoes" ){
-        Number (valor) += 300
-    }
-    else if (guloseima == "maquiagem"){
-        Number (valor) += 150
-    }
-    else if (guloseima == "brindes"){
-        Number (valor) += 100
+    else{
+        total = Number(total) - Number(valor);
+         //total -= valor; forma reduzida
     }
 
-    // saída
-
-    apagar = document.getElementById("total").value;
+    //saida
+    document.getElementById('total').value = total;
 }
 
+function trocaTema(){
+//entrada
+
+    tema= document.getElementById('tema').value;
+
+    //processamento
+    if (tema == "mario") {
+        titulo = "Super Mario Brós";
+        newFundo = "img/mario.jpg";
+        newFoto = "img/mario.png";
+        cor = "red";
+
+        altura= "85%"
+        right ="0%"
+        botttom = "-5%"
+    }
+
+    else if (tema == "sofia"){
+        titulo  = "Princesa Sofia";
+        newFundo = "img/sofia.jpg";
+        newFoto = "img/sofia.png";
+        cor = "purple";
+
+        altura= "90%"
+        right ="5%"
+        botttom = "-5%"
+    }
+    else if (tema == "pjmasks"){
+        titulo = "Pj Masks";
+        newFundo = "img/pjmasks.jpg";
+        newFoto = "img/pjmasks.png";
+        cor = "blue"
+
+        altura= "85%"
+        right ="0%"
+        botttom = "-5%"
+    }
+    else{
+        titulo = "Tema da Festa"
+        newFundo = "";
+        newFoto = "";
+        cor = "black"
+
+        altura= "85%"
+        right ="0%"
+        botttom = "-5%"
+    }
+    //saida
+    document.getElementById("titulo").value = titulo;
+    document.body.style.backgroundImage = "url(" + newFundo +")";
+    document.getElementById('foto').src = newFoto;
+    document.getElementById('titulo').style.color = cor;
+    document.body.style.color = cor;
+
+    document.getElementById("foto").style.height = height;
+    document.getElementById("foto").style.right = right; 
+    document.getElementById("foto").style.bottom = bottom;
+
+}
 
 /*
     function confirmar(form){

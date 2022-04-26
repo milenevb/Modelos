@@ -12,8 +12,11 @@
     <title>Montando sua Festa</title>
   </head>
   <body>
+    <div id="imagem">
+      <img id="foto">
+    </div>
     <section class="container" id="conteudo"> <!--container é para deixar em 80%, no bootstrap. procura em documentação-->
-        <h1>Tema da Festa</h1>
+        <h1><output id="titulo">Tema da Festa</output></h1>
 
         <form class="row g-3" name="form" >
             <div class="col-md-6">
@@ -34,11 +37,11 @@
             </div>
             <div class="col-md-6">
               <label for="tema" class="form-label">Tema</label>
-              <select id="tema" class="form-select">
+              <select id="tema" class="form-select" onchange="trocaTema()">
                 <option selected>Selecione...</option>
                 <option value="mario">Super Mario Bros</option>
                 <option value="sofia">Princesa Sofia</option>
-                <option value="pj">Pj Masks</option>
+                <option value="pjmasks">Pj Masks</option>
               </select>
             </div>
         <div class="col-12" name="form"> Horário da Festa: 
@@ -58,32 +61,32 @@
             </div>
             <div class="col-md-6">
                 <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="guloseimas" id="guloseimas">
-                    <label class="form-check-label" for="guloseimas" onclick="adiciona()">
+                    <input class="form-check-input" type="checkbox" value="guloseimas" id="guloseimas" onchange="opcionais(350,this.checked)">
+                    <label class="form-check-label" for="guloseimas">
                       Mesa de Guloseimas
                     </label>
                   </div>
                   <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="personagens" id="personagens" >
-                    <label class="form-check-label" for="personagens" onclick="adiciona()">
+                    <input class="form-check-input" type="checkbox" value="personagens" id="personagens" onchange="opcionais(250,this.checked)">
+                    <label class="form-check-label" for="personagens"  >
                       Personagens
                     </label>
                   </div>
                   <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="atracoes" id="atracoes" >
-                    <label class="form-check-label" for="atracoes" onclick="adiciona()">
+                    <input class="form-check-input" type="checkbox" value="atracoes" id="atracoes"  onchange="opcionais(300,this.checked)" >
+                    <label class="form-check-label" for="atracoes" >
                       Atrações
                     </label>
                   </div>
                   <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="maquiagem" id="maquiagem" >
-                    <label class="form-check-label" for="maquiagem" onclick="adiciona()">
+                    <input class="form-check-input" type="checkbox" value="maquiagem" id="maquiagem" onchange="opcionais(150,this.checked)">
+                    <label class="form-check-label" for="maquiagem"  >
                       Maquiagem Infantil
                     </label>
                   </div>
                   <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="brindes" id="brindes" >
-                    <label class="form-check-label" for="brindes" onclick="adiciona()">
+                    <input class="form-check-input" type="checkbox" value="brindes" id="brindes" onchange="opcionais(100,this.checked)">
+                    <label class="form-check-label" for="brindes"  >
                       Brindes
                     </label>
                   </div>
