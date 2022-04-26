@@ -58,13 +58,13 @@
                 <input type="tel" name="telefone" placeholder="(XX)XXXXX-XXXX" onkeypress="mascara_tel(this)" onkeyup="salto(this.name, this.value)" onkeydown="return somente_numero(event)" maxlength="14">
                             
                 <label for="pagamento">Forma de Pagamento</label>
-                <select name="pagamento">
+                <select name="pagamento" onchange="pag(this.value)">
                     <option value="Dinheiro">Dinheiro</option>
-                    <option value="Cartão" onclick="pagamento('cartao')">Cartão</option>
+                    <option value="Cartão"> Cartão</option>
                     <option value="Cheque">Cheque</option>
                 </select>
 
-            <fieldset>
+            <fieldset id="esconde_cartao">
                 <legend> Cartão </legend>
 
                 <label for="cartao"> Nº do Cartão</label>

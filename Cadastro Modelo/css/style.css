@@ -56,6 +56,6 @@ legend{
     padding: 2%;
     width: 50%;
 }
-#msg, #cartao, #cnpj{
+#msg, #esconde_cartao, #cnpj{
     display: none;
 }

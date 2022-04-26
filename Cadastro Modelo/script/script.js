@@ -96,12 +96,12 @@ function pessoa(obj){
     }
 }
 
-function pagamento(obj){
-    if(obj == 'cartao'){
-        document.getElementById('cartao').style.display = "block";
+function pag(obj){
+    if(obj == 'Cartão'){
+        document.getElementById('esconde_cartao').style.display = "block";
     }
     else{
-        document.getElementById('cartao').style.display = "none";
+        document.getElementById('esconde_cartao').style.display = "none";
     }
 }
 
