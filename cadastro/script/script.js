@@ -184,3 +184,13 @@ function somente_numero(e){
         return false;
     }
 }
+
+let btn = document.querySelector('.lnr-eye');
+btn.addEventListener('click', function() {
+    let input = document.querySelector('#senha1');
+    if(input.getAttribute('type') == 'senha1') {
+        input.setAttribute('type', 'text');
+    } else {
+        input.setAttribute('type', 'senha1');
+    }
+});
