@@ -1,6 +1,7 @@
 body{
     background-color: rgba(63, 43, 99, 0.644);
     color: brown;
+    font-size: large;
 }
 
 #pag{
@@ -60,10 +61,8 @@ legend{
     display: none;
 }
 
-/* PARTE DO OLHINHO :) */
-body {
-    font-family: Helvetica;
-}
+/* PARTE DO MOSTRAR SENHA :) */
+
 div {
     position: relative;
 }
@@ -79,4 +78,7 @@ input {
     top: 35px;
     right: 10px;
     cursor: pointer;
+}
+#eye2  {
+    display: none;
 }

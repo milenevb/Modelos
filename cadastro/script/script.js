@@ -73,8 +73,8 @@ function confirma(form){
     }
 }
 function senha(){
-    senha1 = document.orcamneto.senha1.value;
-    senha2 = document.orcamneto.senha2.value;
+    senha1 = document.orcamento.senha1.value;
+    senha2 = document.orcamento.senha2.value;
 
     if (senha1 !=senha2) {
         document.getElementById('msg').style.display = "block";
@@ -185,12 +185,22 @@ function somente_numero(e){
     }
 }
 
-let btn = document.querySelector('.lnr-eye');
+let btn = document.querySelector('#eye');
 btn.addEventListener('click', function() {
     let input = document.querySelector('#senha1');
-    if(input.getAttribute('type') == 'senha1') {
+    if(input.getAttribute('type') == 'password') {
         input.setAttribute('type', 'text');
     } else {
-        input.setAttribute('type', 'senha1');
+        input.setAttribute('type', 'password');
+    }
+});
+
+let btn2 = document.querySelector('#eye2');
+btn.addEventListener('click', function() {
+    let input = document.querySelector('#senha2');
+    if(input.getAttribute('type') == 'password') {
+        input.setAttribute('type', 'text');
+    } else {
+        input.setAttribute('type', 'password');
     }
 });
