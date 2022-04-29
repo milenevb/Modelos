@@ -1,0 +1,10 @@
+body{
+    background-color: rgb(6, 24, 24);
+}
+#conteudo{
+    margin-top: 2%;
+    padding: 2%;
+    background-color: hsla(0, 0%, 100%, 0.801);
+    width: 50%;
+    margin-left: 10%;
+}
