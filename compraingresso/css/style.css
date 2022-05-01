@@ -14,6 +14,12 @@ body{
 h1{
     text-align: center;
 }
+h2{
+    text-align: center;
+    font-size: 5em;
+    color: rgb(0, 0, 0);
+    
+}
 #botao{
     margin: 0 auto;
     display: inline-block;
