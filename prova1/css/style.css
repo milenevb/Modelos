@@ -1,5 +1,8 @@
 body{
-    background-image: linear-gradient(to bottom, rgb(15, 223, 238), rgb(1, 82, 119));
+    background-image: linear-gradient(to bottom, rgba(235, 11, 227, 0.878), rgb(164, 54, 198) , rgb(27, 178, 248));
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
 }
 
 #eye2{
@@ -8,7 +11,7 @@ body{
 
 #conteudo{
     padding: 2%;
-    background-color: hsl(270, 2%, 82%);
+    background-color: hsl(0, 0%, 100%);
     width: 50%;
     margin-left: 10%;
     border-radius: 1.5em;
@@ -20,15 +23,33 @@ body{
 
 h1, h2{
     text-align: center;
+    color: blueviolet;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif ;
+
 }
 #botao{
-    background-color: rgb(230, 83, 184);
-    border-color: blueviolet;
+    text-align: center;
+    background-color: rgba(16, 201, 19, 0.822);
+    border-color: rgb(116, 233, 32);
+    width: 10em;
+    font-size: 1em;
+    border-radius: 1em;
 }
-#esconde_cartao{
+
+#escondecartao{
     display: none;
 }
 
+#saida{
+    font-size: 2em;
+}
+
+#nome, #sobrenome, #data, #email, #senha1, #senha2, #show, #ingresso, #area, #nomecartao, #seguranca, #cartao, #data{
+    border-color: rgb(130, 8, 223);
+    color: rgba(72, 72, 73, 0.717);
+    background-color: rgba(185, 182, 187, 0.453);
+    border-radius: 1em;
+}
 
 
 

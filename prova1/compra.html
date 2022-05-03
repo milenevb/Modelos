@@ -17,7 +17,7 @@
 
 <body>
     <section id="conteudo" >
-        <form class="row g-3" method="post" name="orc" id="orc" action="compra.html" oninput="calculos(this)" onsubmit= "return confirma(this)">
+        <form class="row g-3" method="post" name="orc" id="orc" oninput="calculos(this)">
             
             <h2>Sua compra foi bem sucedida!</h2>
 
@@ -33,7 +33,7 @@
 
             <div class="col-md-6">
                 <label for="area">Área:</label>
-                <select class="form-select" name="area" id="area" onchange="area()" >
+                <select class="form-select" name="area" id="area" onchange="trocararea()" >
                     <option selected>Escolha uma área</option>
                     <option value="pista">Pista</option>
                     <option value="pistavip">Pista Vip</option>
@@ -43,7 +43,7 @@
 
             <div class="col-md-5">
                 <label for="ingresso">Ingressos:</label>
-                <select class="form-select" name="ingresso" id="ingresso" onchange="ingresso()" >
+                <select class="form-select" name="ingresso" id="ingresso" onchange="trocaringresso()" >
                     <option selected>Ingressos</option>
                     <option value="inteira">Inteira</option>
                     <option value="meia">Meia</option>
@@ -88,7 +88,9 @@
                 R$ <output id="total">0 </output>,00
             </div>
 
-            <button type="submit" id="botao" value="botao" class="btn btn-primary">Confirmar!</button>
+            <div class="text-center">
+                <button type="button" id="botao" value="botao" class="btn btn-primary" onclick="fim()">Confirmar!</button>
+            </div>
 
         </form>
     </section>

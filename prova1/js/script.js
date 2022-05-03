@@ -29,9 +29,15 @@ function confirma(form){
         alert("O campo Senha está diferente da Confirmação de Senha.")
         form.senha1.focus(); 
         return false;    
-    }
+    } 
+    
+        return true;
+    
+      
+}
 
-    return true;
+function fim(){
+    alert("compra feita!")
 }
 
 function senha(){
@@ -68,13 +74,33 @@ btn.addEventListener('click', function() {
     }
 });
 
-function conteudo(obj){
+function pag(obj){
     if(obj == 'cartao'){
-        alert("mimi")
         document.getElementById('escondecartao').style.display = "block";
     }
     else{
         document.getElementById('escondecartao').style.display = "none";
+    }
+}
+
+//cartao
+function mascara_cartao(obj){
+    if(obj.value.length == 5)
+        obj.value += " "
+    else if (obj.value.length == 11)
+        obj.value += " "
+    else if (obj.value.length == 13)
+        obj.value += " "
+}
+
+function somente_numero(e){
+    tecla = (window.event)?event.keyCode:e.which;
+
+    if ( ( tecla >=48 && tecla<=57) || (tecla>=96 && tecla<=105) || (tecla == 8) || (tecla == 37) || (tecla == 39) || (tecla == 46) ){
+        return true;
+    }
+    else{
+        return false;
     }
 }
 
@@ -84,17 +110,55 @@ function calculo(){
     show = document.getElementById("show").value;
    
     if (show == "anitta"){
-    valor = 1500
+        valor = 340
     }
     else if ( show == "um44k"){
-    valor = 1800
+        valor = 150
     } 
     else {
-        valor = 2000
+        valor = 100
     }
 
     document.getElementById("total").value = valor;
 
 }
 
-//https://colorlib.com/etc/lf/Login_v1/index.html
+
+
+ function trocararea(){
+    valor = document.getElementById("total").value;
+
+    area = document.getElementById("area").value; // nome q eu quero = document.getelement(id).vlue
+    
+    if (area == "pista"){
+        valor = valor - (valor * 10 /100)
+    }
+    else if (area == "pistavip") {
+        valor = valor
+    }
+    else if (area == "camarote"){
+        valor = valor + (valor * 10/100)
+    }
+    
+    document.getElementById("total").value = valor;
+} 
+
+ function trocaringresso(){
+    valor = document.getElementById("total").value;
+
+    ingresso = document.getElementById("ingresso").value;
+
+    if (ingresso == "inteira"){
+        valor = valor
+    }
+    else if (ingresso == "meia"){
+        valor = valor/2
+    }
+    else if (ingresso == "promocional"){
+        valor = valor - (valor * 10 /100)
+    }
+
+    document.getElementById("total").value = valor;
+ }
+
+
