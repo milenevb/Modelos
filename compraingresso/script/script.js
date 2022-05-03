@@ -97,8 +97,9 @@ pagamento = form.pagamento.value;
 //processamento 
 
 function calculo(){
+   
     show = document.getElementById("show").value;
-
+   
     if (show == "anitta"){
     valor = 1500
     }
@@ -108,6 +109,14 @@ function calculo(){
     else {
         valor = 2000
     }
+
+    document.getElementById("total").value = valor;
+
 }
 
-total = document.getElementById("total").value;
+ 
+
+
+/*
+document.getElementById("total").value
+*/

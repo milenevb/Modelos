@@ -31,3 +31,7 @@ h2{
     border-radius: 1em;
 
 }
+
+#esconde_cartao{
+    display: none;
+}
