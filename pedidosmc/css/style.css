@@ -1,0 +1,8 @@
+
+h1, body{
+    text-align: center;
+}
+.card-img-top {
+    height: 250px;
+    width: 280px;
+}
